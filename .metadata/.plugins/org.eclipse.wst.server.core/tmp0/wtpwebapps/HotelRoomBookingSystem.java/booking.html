@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StayFinder | Confirm Booking</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Arial,sans-serif;
+min-height:100vh;
+background:linear-gradient(135deg,#081c2c,#123f5c,#176b87);
+display:flex;
+align-items:center;
+justify-content:center;
+padding:25px;
+}
+
+.card{
+width:100%;
+max-width:520px;
+background:white;
+padding:38px;
+border-radius:20px;
+box-shadow:0 20px 55px rgba(0,0,0,.3);
+}
+
+.logo{
+text-align:center;
+font-size:28px;
+font-weight:bold;
+color:#12355b;
+}
+
+.subtitle{
+text-align:center;
+color:#667085;
+margin:8px 0 28px;
+}
+
+.info{
+background:#f0f8fc;
+padding:18px;
+border-radius:12px;
+margin-bottom:25px;
+}
+
+.info p{
+margin:9px 0;
+color:#344054;
+}
+
+.info strong{
+color:#12355b;
+}
+
+button{
+width:100%;
+padding:15px;
+border:0;
+border-radius:10px;
+background:linear-gradient(135deg,#d97706,#b45309);
+color:white;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+button:hover{
+transform:translateY(-2px);
+}
+
+.back{
+display:block;
+text-align:center;
+margin-top:20px;
+color:#176b87;
+text-decoration:none;
+font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<div class="logo">🏨 StayFinder</div>
+
+<p class="subtitle">
+Confirm your room reservation
+</p>
+
+<div class="info">
+
+<p>
+📅 Check-in:
+<strong id="showCheckIn">Loading...</strong>
+</p>
+
+<p>
+📅 Check-out:
+<strong id="showCheckOut">Loading...</strong>
+</p>
+
+</div>
+
+<form id="bookingForm" action="booking" method="post">
+
+<input type="hidden" name="room_id" id="room_id">
+<input type="hidden" name="check_in" id="check_in">
+<input type="hidden" name="check_out" id="check_out">
+
+<button type="submit">
+Confirm Booking →
+</button>
+
+</form>
+
+<a href="javascript:history.back()" class="back">
+← Back to Rooms
+</a>
+
+</div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const roomId = params.get("room_id");
+const checkIn = params.get("check_in");
+const checkOut = params.get("check_out");
+
+if(!roomId || !checkIn || !checkOut){
+
+document.querySelector(".info").innerHTML =
+"<p style='color:#b42318;font-weight:bold'>" +
+"Booking information is missing." +
+"</p>";
+
+document.getElementById("bookingForm").style.display="none";
+
+}else{
+
+document.getElementById("room_id").value = roomId;
+document.getElementById("check_in").value = checkIn;
+document.getElementById("check_out").value = checkOut;
+
+document.getElementById("showCheckIn").textContent = checkIn;
+document.getElementById("showCheckOut").textContent = checkOut;
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>StayFinder | Login</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    font-family:Arial,sans-serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+    background:
+        linear-gradient(135deg,rgba(8,28,44,.94),rgba(23,107,135,.88)),
+        url("images/hotel-hero.jpg") center/cover;
+}
+
+.card{
+    width:100%;
+    max-width:430px;
+    background:white;
+    padding:38px;
+    border-radius:20px;
+    box-shadow:0 20px 55px rgba(0,0,0,.3);
+}
+
+.logo{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    color:#12355b;
+    margin-bottom:8px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#667085;
+    margin-bottom:28px;
+}
+
+label{
+    display:block;
+    margin:16px 0 7px;
+    color:#344054;
+    font-weight:bold;
+    font-size:14px;
+}
+
+input{
+    width:100%;
+    padding:13px;
+    border:1px solid #d0d5dd;
+    border-radius:9px;
+    outline:none;
+    font-size:15px;
+}
+
+input:focus{
+    border-color:#176b87;
+    box-shadow:0 0 0 3px rgba(23,107,135,.12);
+}
+
+button{
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:0;
+    border-radius:9px;
+    background:linear-gradient(135deg,#d97706,#b45309);
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.register{
+    text-align:center;
+    margin-top:22px;
+    color:#667085;
+    font-size:14px;
+}
+
+.register a{
+    color:#176b87;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    margin-top:18px;
+    color:#667085;
+    text-decoration:none;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="logo">🏨 StayFinder</div>
+
+    <p class="subtitle">Login to continue your booking</p>
+
+    <form action="login" method="post">
+
+        <label>Email Address</label>
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required>
+
+        <label>Password</label>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+            required>
+
+        <!-- Booking information -->
+        <input type="hidden" name="room_id" id="room_id">
+        <input type="hidden" name="check_in" id="check_in">
+        <input type="hidden" name="check_out" id="check_out">
+
+        <button type="submit">
+            Login & Continue →
+        </button>
+
+    </form>
+
+    <p class="register">
+        Don't have an account?
+        <a href="register.html">Create Account</a>
+    </p>
+
+    <a href="index.html" class="back">
+        ← Back to Home
+    </a>
+
+</div>
+
+<script>
+
+const params =
+    new URLSearchParams(window.location.search);
+
+document.getElementById("room_id").value =
+    params.get("room_id") || "";
+
+document.getElementById("check_in").value =
+    params.get("check_in") || "";
+
+document.getElementById("check_out").value =
+    params.get("check_out") || "";
+
+</script>
+
+</body>
+</html>

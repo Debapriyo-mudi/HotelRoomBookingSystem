@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="Debapriyo Mudi &lt;Debapriyo Mudi@LAPTOP-FO33R2VT&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Debapriyo Mudi &lt;Debapriyo Mudi@LAPTOP-FO33R2VT&gt;"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Debapriyo-mudi/HotelRoomBookingSystem.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="200,200"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="D:\java project- hotel room booking sys\HotelRoomBookingSystem.java\.git">
+			<item value="false"/>
+			<item value="Debapriyo Mudi &lt;Debapriyo Mudi@LAPTOP-FO33R2VT&gt;"/>
+			<item value="initial commit - Hotel Room Booking System"/>
+			<item value="Debapriyo Mudi &lt;Debapriyo Mudi@LAPTOP-FO33R2VT&gt;"/>
+			<item value="b500c5d541c8108cf6ff60686177095993388993"/>
+			<item value="0"/>
+			<item value="false"/>
+			<item value=""/>
+		</list>
+	</section>
+</section>

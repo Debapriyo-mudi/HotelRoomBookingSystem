@@ -1,0 +1,9 @@
+127.0.0.1 - - [14/Aug/2026:02:40:07 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:02:40:07 +0530] "GET /HotelRoomBookingSystem/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:02:40:11 +0530] "GET /favicon.ico HTTP/1.1" 404 763
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:02:40:28 +0530] "GET /HotelRoomBookingSystem/ HTTP/1.1" 404 779
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:02:52:33 +0530] "GET /HotelRoomBookingSystem/index.jsp HTTP/1.1" 404 767
+127.0.0.1 - - [14/Aug/2026:03:07:29 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:03:07:29 +0530] "GET /HotelRoomBookingSystem.java/index.html HTTP/1.1" 200 232
+127.0.0.1 - - [14/Aug/2026:03:58:59 +0530] "GET / HTTP/1.1" 404 752
+0:0:0:0:0:0:0:1 - - [14/Aug/2026:03:59:00 +0530] "GET /HotelRoomBookingSystem.java/index.html HTTP/1.1" 304 -
